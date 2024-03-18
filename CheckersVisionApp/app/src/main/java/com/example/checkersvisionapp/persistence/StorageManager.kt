@@ -41,8 +41,8 @@ object StorageManager {
             context.getExternalFilesDir(Environment.DIRECTORY_PICTURES),
             gameName
         )
-        gameDir.takeIf { gameDir.exists() && gameDir.isDirectory }?.let { gameDir ->
-            result = gameDir.deleteRecursively()
+        gameDir.takeIf { it.exists() && it.isDirectory }?.let {
+            result = it.deleteRecursively()
         }
         return result
     }
@@ -53,8 +53,8 @@ object StorageManager {
             gameName
         )
         val positionImgList = mutableListOf<Bitmap>()
-        gameDir.takeIf { gameDir -> gameDir.isDirectory }?.let { gameDir ->
-            gameDir.listFiles()
+        gameDir.takeIf { it.exists() && it.isDirectory }?.let {
+            it.listFiles()
                 .filter { positionImgFile -> positionImgFile.canRead() && positionImgFile.isFile }
                 .sorted()
                 .map { positionImgFile ->
@@ -68,11 +68,11 @@ object StorageManager {
     }
 
     fun loadCheckersGames(context: Context): List<CheckersGame> {
-        val parentDir = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        val parentDir = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
         val games = mutableListOf<CheckersGame>()
 
-        parentDir?.let { parentDir ->
-            parentDir.listFiles().filter { it.isDirectory }.forEach { gameDir ->
+        parentDir?.takeIf { it.exists() && it.isDirectory }?.let {
+            it.listFiles().filter { gameDir->gameDir.isDirectory }.forEach { gameDir ->
                 games.add(loadCheckersGame(context, gameDir.nameWithoutExtension))
             }
         }

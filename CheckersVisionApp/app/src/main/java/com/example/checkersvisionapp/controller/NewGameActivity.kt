@@ -4,7 +4,6 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.os.Bundle
-import android.util.Log
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.CameraSelector
@@ -16,9 +15,6 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.LifecycleOwner
 import com.example.checkersvisionapp.R
 import com.example.checkersvisionapp.model.CheckersGame
@@ -81,13 +77,8 @@ class NewGameActivity : AppCompatActivity() {
             this,
             arrayOf(android.Manifest.permission.CAMERA),
             PERMISSION_REQUEST_CODE
-        );
+        )
 
-    }
-
-    private fun moveToHome()
-    {
-        StorageManager.saveCheckersGame(this, game)
     }
 
     private fun moveToPrediction() {
@@ -100,7 +91,7 @@ class NewGameActivity : AppCompatActivity() {
 
     private fun setupCamera(takePhotoBtn: ImageButton, previewView: PreviewView) {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
-        cameraProviderFuture.addListener(Runnable {
+        cameraProviderFuture.addListener({
             val cameraProvider = cameraProviderFuture.get()
             startCamera(cameraProvider, takePhotoBtn, previewView)
         }, ContextCompat.getMainExecutor(this))

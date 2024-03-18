@@ -2,19 +2,13 @@ package com.example.checkersvisionapp.controller.oldGames
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.checkersvisionapp.R
-import com.example.checkersvisionapp.controller.MainActivity
 import com.example.checkersvisionapp.controller.PredictionActivity
 import com.example.checkersvisionapp.persistence.StorageManager
-import java.io.File
 
 class OldGamesActivity : AppCompatActivity() {
 
@@ -76,55 +70,6 @@ class OldGamesActivity : AppCompatActivity() {
         }
     }
 
-    /* Create and inflate context menu
-    override fun onCreateContextMenu(menu: ContextMenu, v: View, menuInfo: ContextMenu.ContextMenuInfo?) {
-        super.onCreateContextMenu(menu, v, menuInfo)
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.context_menu, menu)
-        val info = menuInfo as ContextMenuRecyclerView.RecyclerContextMenuInfo
-
-        if (info != null) {
-            // Get element information from RecyclerView
-            val itemPosition = info.position
-            // Get element id from adapter
-            val itemId = gamesAdapter.getItemId(itemPosition)
-
-
-            // Set menuInfo with element id
-            menu.setHeaderTitle("Menu per l'elemento $itemId")
-            menu.add(Menu.NONE, R.id.ctx_menu_show_prediction, Menu.NONE, R.string.show_game)
-            menu.add(Menu.NONE, R.id.ctx_menu_delete, Menu.NONE, R.string.delete)
-            //menuInfo.targetView.setTag(R.id.menu_item_id, itemId)
-        }
-    }
-
-    // Choices out of the menu
-    override fun onContextItemSelected(item: MenuItem): Boolean {
-        val info = item.menuInfo as ContextMenuRecyclerView.RecyclerContextMenuInfo
-        return when (item.itemId) {
-            R.id.show_game -> {
-                val intent = Intent(this, PredictionActivity()::class.java)
-                startActivity(intent)
-                true
-            }
-            R.id.delete_game -> {
-                val gameToDeleteId = gamesAdapter.getItemId(info.position)
-                val gameToDelete = dataSource.getGameForId(gameToDeleteId)
-                if (gameToDelete != null) {
-                    val dirName = gameToDelete.name
-                    val dirToDelete = File(
-                        getExternalFilesDir(Environment.DIRECTORY_PICTURES),
-                        dirName
-                    )
-                    deleteDirectory(dirToDelete)
-                }
-                true
-            }
-            else -> super.onContextItemSelected(item)
-        }
-    }
-    */
-
     // Delete game from datasource
     private fun deleteGame(gameToDelete: CheckersGameView, position: Int) {
         val result = StorageManager.deleteCheckersGame(this, gameToDelete.name)
@@ -132,20 +77,5 @@ class OldGamesActivity : AppCompatActivity() {
             dataSource.removeGameView(position)
             Toast.makeText(this, "Game eliminato con successo", Toast.LENGTH_LONG).show()
         } else Toast.makeText(this, "Impossibile eliminare game", Toast.LENGTH_SHORT).show()
-    }
-
-    // Delete directory from local storage
-    private fun deleteDirectory(directory: File): Boolean {
-        if (directory.exists()) {
-            if (directory.deleteRecursively()) {
-                Toast.makeText(this, "Game eliminato con successo", Toast.LENGTH_LONG).show()
-                return true
-            } else {
-                Toast.makeText(this, "Impossibile eliminare game", Toast.LENGTH_SHORT).show()
-            }
-        } else {
-            Toast.makeText(this, "Il game non esiste", Toast.LENGTH_SHORT).show()
-        }
-        return false
     }
 }
