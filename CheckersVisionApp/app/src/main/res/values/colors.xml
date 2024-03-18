@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="non_photo_blue">#90DDF0</color>
+    <color name="caribbean_current">#2C666E</color>
+    <color name="midnight_green">#07393C</color>
+    <color name="anti_flash_white">#F0EDEE</color>
+    <color name="night">#0A090C</color>
+
+    <color name="mauve">#E0AAFF</color>
+    <color name="heliotrope">#C77DFF</color>
+    <color name="amethyst">#9D4EDD</color>
+    <color name="french_violet">#7B2CBF</color>
+    <color name="tekhelet">#5A189A</color>
+    <color name="persian_indigo">#3C096C</color>
+
+
+    <color name="colorAccent">#FFFFFF</color>
+    <!--<color name="colorPrimary">#2C666E</color>
+    <color name="colorPrimaryDark">#07393C</color>-->
+    <color name="colorPrimary">#7B2CBF</color>
+    <color name="colorPrimaryDark">#3C096C</color>
+
+</resources>

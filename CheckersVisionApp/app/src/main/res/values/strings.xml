@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CheckersVisionApp</string>
+    <string name="prediction_image">prediction image</string>
+    <string name="directory_icon">directory_icon</string>
+    <string name="game_directory">Game Directory</string>
+    <string name="new_game">New Game</string>
+    <string name="old_games">Old Games</string>
+    <string name="old_game">Old Games</string>
+    <string name="show_game">Show Game</string>
+    <string name="delete">Delete</string>
+</resources>

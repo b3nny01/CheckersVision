@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ChessRecordApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!--   primary color -->
+        <!--<item name="colorPrimary">@color/caribbean_current</item>-->
+        <item name="colorPrimary">@color/french_violet</item>
+
+        <!--   darker variant for the status bar and contextual app bars -->
+        <!--<item name="colorPrimaryDark">@color/midnight_green</item>-->
+        <item name="colorPrimaryDark">@color/persian_indigo</item>
+
+        <!--   theme UI controls like checkboxes and text fields -->
+        <item name="android:colorAccent">@color/anti_flash_white</item>
+
+        <item name="android:navigationBarColor">@color/night</item>
+    </style>
+
+    <style name="Theme.ChessRecordApp" parent="Base.Theme.ChessRecordApp" />
+</resources>
