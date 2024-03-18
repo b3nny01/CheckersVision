@@ -4,20 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
 import com.example.checkersvisionapp.R
 import com.example.checkersvisionapp.controller.oldGames.OldGamesActivity
-import com.example.checkersvisionapp.persistence.StorageManager
-import java.io.File
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var newGameBtn: Button
     private lateinit var myGamesBtn: Button
-    private val testGameDirName = "testGame"
-    private lateinit var testGameDir: File
 
     companion object {
         const val PERMISSION_REQUEST_CODE = 1

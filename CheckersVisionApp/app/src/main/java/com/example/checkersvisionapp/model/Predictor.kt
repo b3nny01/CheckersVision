@@ -18,7 +18,7 @@ class Predictor(private val module: Module) {
         val squareSize = borderSize * 11
         val squarePredictions = mutableListOf<PredictedSquare>()
 
-        var counter = 0;
+        var counter = 0
         for (i in 0..7) {
             counter = (counter + 1) % 2
             for (j in 0..7) {
@@ -40,8 +40,8 @@ class Predictor(private val module: Module) {
                     val scores = outputTensor.dataAsFloatArray
 
 
-                    var maxIndex = 0;
-                    var max = -Float.MAX_VALUE;
+                    var maxIndex = 0
+                    var max = -Float.MAX_VALUE
                     for (k in scores.indices) {
                         if (scores[k] >= max) {
                             max = scores[k]

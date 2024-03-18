@@ -16,7 +16,7 @@ class DataSource(private val context: Context) {
         StorageManager.loadCheckersGames(context).forEach { game ->
             games.add(
                 CheckersGameView(
-                    Random.nextLong(), game
+                    Random.nextLong(), game.name
                 )
             )
         }

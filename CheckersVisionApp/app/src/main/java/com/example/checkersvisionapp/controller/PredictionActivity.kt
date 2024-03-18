@@ -8,14 +8,10 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
 import com.example.checkersvisionapp.R
 import com.example.checkersvisionapp.model.CheckersGame
 import com.example.checkersvisionapp.model.PredictedGame
 import com.example.checkersvisionapp.model.PredictedPosition
-import com.example.checkersvisionapp.model.Predictor
 import com.example.checkersvisionapp.model.SquareClass
 import com.example.checkersvisionapp.persistence.StorageManager
 
@@ -51,7 +47,7 @@ class PredictionActivity : AppCompatActivity() {
         predictedGame=PredictedGame.of(game, StorageManager.loadModel("50_ep_v1_3_color.ptl",this))
 
 
-        // prediction intialization
+        // prediction initialization
         updatePrediction()
 
 
