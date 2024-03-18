@@ -88,7 +88,6 @@ class NewGameActivity : AppCompatActivity() {
     private fun moveToHome()
     {
         StorageManager.saveCheckersGame(this, game)
-        finish();
     }
 
     private fun moveToPrediction() {
@@ -125,15 +124,12 @@ class NewGameActivity : AppCompatActivity() {
             CameraSelector.Builder().requireLensFacing(CameraSelector.LENS_FACING_BACK).build()
         preview.setSurfaceProvider(previewView.surfaceProvider)
         takePhotoBtn.setOnClickListener {
-            Log.w("adding position ","clicked")
             imageCapture.takePicture(this.mainExecutor,
                 object : ImageCapture.OnImageCapturedCallback() {
                     override fun onCaptureSuccess(image: ImageProxy) {
                         super.onCaptureSuccess(image)
-                        Log.w("adding position ","image taken")
                         val cropRect=image.cropRect
                         val croppedImg=Bitmap.createBitmap(image.toBitmap(),cropRect.left,cropRect.top,cropRect.width(),cropRect.height())
-                        Log.w("adding position ",game.numberOfPositions.toString())
                         game.addPosition(croppedImg)
                         image.close()
                     }
