@@ -86,7 +86,6 @@ class NewGameActivity : AppCompatActivity() {
         val intent = Intent(this, PredictionActivity::class.java)
         intent.putExtra("gameName", game.name)
         startActivity(intent)
-        finish()
     }
 
     private fun setupCamera(takePhotoBtn: ImageButton, previewView: PreviewView) {

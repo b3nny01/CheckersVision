@@ -5,22 +5,13 @@ import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.checkersvisionapp.persistence.StorageManager
-import kotlin.random.Random
 
 class DataSource(private val context: Context) {
     private val initialGameList = gameViews()
     private val gamesLiveData = MutableLiveData(initialGameList)
 
     private fun gameViews(): List<CheckersGameView> {
-        val games = mutableListOf<CheckersGameView>()
-        StorageManager.loadCheckersGames(context).forEach { game ->
-            games.add(
-                CheckersGameView(
-                    Random.nextLong(), game.name
-                )
-            )
-        }
-        return games
+        return StorageManager.loadCheckersGamesView(context)
     }
 
     // Return game given an ID
@@ -43,19 +34,6 @@ class DataSource(private val context: Context) {
             val updatedList = currentList.toMutableList()
             updatedList.removeAt(position)
             gamesLiveData.postValue(updatedList)
-        }
-    }
-
-    companion object {
-        @SuppressLint("StaticFieldLeak")
-        private var INSTANCE: DataSource? = null
-
-        fun getDataSource(context: Context): DataSource {
-            return synchronized(DataSource::class) {
-                val newInstance = INSTANCE ?: DataSource(context)
-                INSTANCE = newInstance
-                newInstance
-            }
         }
     }
 }

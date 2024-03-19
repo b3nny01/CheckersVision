@@ -3,10 +3,10 @@ from Classifier import *
 from torchvision import transforms,models
 
 # classification model path
-classifierPath=os.path.join("classification_models","mobilenet_v2","50_ep_v1_3_color.pt")
+classifierPath=os.path.join("classification_models","mobilenet_v2","100_ep_v1_3_color.pt")
 
 # optimized model path
-optimizedModelPath=os.path.join("optimized_models","mobilenet_v2","50_ep_v1_3_color.ptl")
+optimizedModelPath=os.path.join("optimized_models","mobilenet_v2","100_ep_v1_3_color.ptl")
 
 # classification model constructor
 classifierConstructor=models.mobilenet_v2

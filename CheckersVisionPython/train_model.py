@@ -14,7 +14,7 @@ dataPath=os.path.join("train_data","v1_3")
 indexFilename="index.csv"
 
 # epochs
-numEpochs = 50
+numEpochs = 100
 
 # output model path 
 outModelPath=os.path.join("classification_models","mobilenet_v2",f"{numEpochs}_ep_v{rawDataVersion}_color.pt")
@@ -48,9 +48,9 @@ optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 # loader
 train_loader = DataLoader(
     custom_dataset,
-    batch_size=500,
+    batch_size=32,
     shuffle=True,
-    num_workers=10,
+    num_workers=8,
 )
 
 # training loop

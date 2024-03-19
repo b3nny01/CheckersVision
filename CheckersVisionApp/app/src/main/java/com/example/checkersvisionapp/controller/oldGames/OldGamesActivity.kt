@@ -28,7 +28,7 @@ class OldGamesActivity : AppCompatActivity() {
         // getting layout elements
         recyclerView = findViewById(R.id.recycler_view)
 
-        dataSource = DataSource.getDataSource(this)
+        dataSource = DataSource(this)
 
 
         gamesAdapter = GameAdapter({ position -> onItemClick(position) }, { position -> onLongItemClick(position) })
