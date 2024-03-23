@@ -9,17 +9,18 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.checkersvisionapp.R
-import com.example.checkersvisionapp.model.CheckersGame
-import com.example.checkersvisionapp.model.PredictedGame
-import com.example.checkersvisionapp.model.PredictedPosition
-import com.example.checkersvisionapp.model.SquareClass
+import com.example.checkersvisionapp.model.checkers.CheckersGame
+import com.example.checkersvisionapp.model.checkers.MutableCheckersGame
+import com.example.checkersvisionapp.model.predicted.PredictedPosition
+import com.example.checkersvisionapp.model.predicted.SquareClass
+import com.example.checkersvisionapp.model.predicted.PredictedGame
 import com.example.checkersvisionapp.persistence.StorageManager
 
 class PredictionActivity : AppCompatActivity() {
 
     // variables
-    private lateinit var game:CheckersGame
-    private lateinit var predictedGame:PredictedGame
+    private lateinit var game: CheckersGame
+    private lateinit var predictedGame: PredictedGame
     private var currentImgIndex = 0
 
     // views
@@ -44,7 +45,8 @@ class PredictionActivity : AppCompatActivity() {
 
         // game and predictedGame initialization
         game=loadCheckersGame()
-        predictedGame=PredictedGame.of(game, StorageManager.loadModel("100_ep_v1_3_color.ptl",this))
+        predictedGame=
+            PredictedGame.of(game, StorageManager.loadModel("100_ep_v1_3_color.ptl",this))
 
 
         // prediction initialization
@@ -70,7 +72,7 @@ class PredictionActivity : AppCompatActivity() {
 
     private fun loadCheckersGame(): CheckersGame {
         val gameName = this.intent.getStringExtra("gameName").orEmpty()
-        return StorageManager.loadCheckersGame(this, gameName)
+        return StorageManager.loadLazyCheckersGame(this,gameName)
     }
 
     private fun updatePrediction()

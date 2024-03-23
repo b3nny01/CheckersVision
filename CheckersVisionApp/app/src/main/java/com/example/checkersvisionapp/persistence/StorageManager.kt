@@ -5,10 +5,11 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Environment
 import com.example.checkersvisionapp.controller.oldGames.CheckersGameView
-import com.example.checkersvisionapp.model.CheckersGame
+import com.example.checkersvisionapp.model.checkers.CheckersGame
+import com.example.checkersvisionapp.model.checkers.MutableCheckersGame
+import com.example.checkersvisionapp.model.checkers.UnmutableLazyCheckersGame
 import org.pytorch.Module
 import java.io.File
-import kotlin.random.Random
 
 object StorageManager {
 
@@ -49,7 +50,7 @@ object StorageManager {
         return result
     }
 
-    fun loadCheckersGame(context: Context, gameName: String): CheckersGame {
+    fun loadEagerCheckersGame(context: Context, gameName: String): CheckersGame {
         val gameDir = File(
             context.getExternalFilesDir(Environment.DIRECTORY_PICTURES),
             gameName
@@ -63,10 +64,28 @@ object StorageManager {
                     positionImgList.add(index,BitmapFactory.decodeFile(positionImgFile.absolutePath))
                 }
         }
-        val game = CheckersGame(gameName)
+        val game = MutableCheckersGame(gameName)
         positionImgList.forEachIndexed { index, bitmap -> game.addPosition(index, bitmap) }
         return game
 
+    }
+
+    fun loadLazyCheckersGame(context: Context, gameName: String): CheckersGame {
+        // directory creation
+        val gameDir = File(
+            context.getExternalFilesDir(Environment.DIRECTORY_PICTURES),
+            gameName
+        )
+        gameDir.mkdirs()
+        return UnmutableLazyCheckersGame(gameName,context)
+
+    }
+
+    fun loadPositionImg(context:Context,gameDir: File,positionNumber:Int):Bitmap
+    {
+        val positionFile = File(gameDir, "Position_${String.format("%03d",positionNumber)}.jpg")
+
+        return BitmapFactory.decodeFile(positionFile.absolutePath);
     }
 
     fun loadCheckersGamesView(context: Context): List<CheckersGameView> {

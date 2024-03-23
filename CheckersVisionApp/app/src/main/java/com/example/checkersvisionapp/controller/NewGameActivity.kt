@@ -17,13 +17,13 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
 import com.example.checkersvisionapp.R
-import com.example.checkersvisionapp.model.CheckersGame
+import com.example.checkersvisionapp.model.checkers.MutableCheckersGame
 import com.example.checkersvisionapp.persistence.StorageManager
 
 class NewGameActivity : AppCompatActivity() {
 
     // variables
-    private val game = CheckersGame("Game_" + System.currentTimeMillis())
+    private val game = MutableCheckersGame("Game_" + System.currentTimeMillis())
 
     // views
     private lateinit var previewView: PreviewView

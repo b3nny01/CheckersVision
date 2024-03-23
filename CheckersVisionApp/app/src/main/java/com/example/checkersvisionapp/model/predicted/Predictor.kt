@@ -1,16 +1,16 @@
-package com.example.checkersvisionapp.model
+package com.example.checkersvisionapp.model.predicted
 
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.ColorMatrix
 import android.graphics.ColorMatrixColorFilter
 import android.graphics.Paint
+import com.example.checkersvisionapp.model.checkers.CheckersPosition
 import org.pytorch.IValue
 import org.pytorch.Module
 import org.pytorch.torchvision.TensorImageUtils
 
 class Predictor(private val module: Module) {
-
 
     fun predictedSquaresOf(position: CheckersPosition): MutableList<PredictedSquare> {
         val imgToPredict = position.img//convertToGrayscale(position.img)
