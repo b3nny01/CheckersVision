@@ -2,7 +2,7 @@ package com.example.checkersvisionapp.model.checkers
 
 import android.graphics.Bitmap
 
-class UnmutableEagerCheckersGame(override val name:String, positionImgs: List<Bitmap> = listOf<Bitmap>()):CheckersGame{
+class ImmutableEagerCheckersGame(override val name:String, positionImgs: List<Bitmap> = listOf()):CheckersGame{
     private val positions= positionImgs.mapIndexed { index, bitmap ->  CheckersPosition(this,index,bitmap) }.toList()
     override val numberOfPositions:Int
         get() = positions.size
