@@ -7,7 +7,7 @@ import android.os.Environment
 import com.example.checkersvisionapp.controller.oldGames.CheckersGameView
 import com.example.checkersvisionapp.model.checkers.CheckersGame
 import com.example.checkersvisionapp.model.checkers.MutableCheckersGame
-import com.example.checkersvisionapp.model.checkers.UnmutableLazyCheckersGame
+import com.example.checkersvisionapp.model.checkers.ImmutableLazyCheckersGame
 import org.pytorch.Module
 import java.io.File
 
@@ -77,7 +77,7 @@ object StorageManager {
             gameName
         )
         gameDir.mkdirs()
-        return UnmutableLazyCheckersGame(gameName,context)
+        return ImmutableLazyCheckersGame(gameName,gameDir.listFiles().size,context)
 
     }
 

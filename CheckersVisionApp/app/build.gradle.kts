@@ -56,4 +56,7 @@ dependencies {
     val pytorchVersion="1.8.0"
     implementation ("org.pytorch:pytorch_android:${pytorchVersion}")
     implementation ("org.pytorch:pytorch_android_torchvision:${pytorchVersion}")
+
+    // required to avoid crash on Android 12 API 31
+    implementation ("com.github.felHR85:UsbSerial:6.1.0")
 }

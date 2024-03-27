@@ -4,6 +4,7 @@ import android.util.Log
 import com.example.checkersvisionapp.model.checkers.CheckersGame
 import com.example.checkersvisionapp.model.checkers.MutableCheckersGame
 import org.pytorch.Module
+import java.lang.StackWalker.Option
 import java.util.Optional
 
 class LazyPredictedGame(private val checkersGame: CheckersGame, module: Module) : PredictedGame {
@@ -11,17 +12,9 @@ class LazyPredictedGame(private val checkersGame: CheckersGame, module: Module) 
     private val positions = mutableListOf<Optional<PredictedPosition>>()
 
     init {
-        checkersGame.forEachPosition { position ->
+        for (i in (0..<checkersGame.numberOfPositions)){
             positions.add(Optional.empty())
         }
-    }
-
-    private fun addPosition(squares: MutableList<PredictedSquare>): Boolean {
-        return positions.add(Optional.of(PredictedPosition(this, positions.size, squares)))
-    }
-
-    private fun addPosition(index: Int, squares: MutableList<PredictedSquare>) {
-        return positions.add(index, Optional.of(PredictedPosition(this, index, squares)))
     }
 
     private fun classifyPosition(index: Int) {
@@ -43,13 +36,13 @@ class LazyPredictedGame(private val checkersGame: CheckersGame, module: Module) 
     }
 
     override fun forEachPosition(action: (index: Int, position: PredictedPosition) -> Unit) {
-        positions.forEachIndexed { index, optional ->
+        positions.forEachIndexed { index, _ ->
             action(index, getPosition(index))
         }
     }
 
     override fun forEachPosition(action: (position: PredictedPosition) -> Unit) {
-        positions.forEachIndexed { index, optional ->
+        positions.forEachIndexed { index, _ ->
             action(getPosition(index))
         }
     }
