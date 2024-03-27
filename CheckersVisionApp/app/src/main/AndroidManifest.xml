@@ -19,6 +19,7 @@
         tools:targetApi="31">
         <activity
             android:name=".controller.MainActivity"
+            android:launchMode="singleTop"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +28,9 @@
         </activity>
         <activity
             android:name=".controller.NewGameActivity"
+            android:launchMode="singleTop"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.CONFIRM_NEW_GAME_ACTIVITY" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -35,6 +38,7 @@
         </activity>
         <activity
             android:name=".controller.oldGames.OldGamesActivity"
+            android:launchMode="singleTop"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.CONFIRM_NEW_GAME_ACTIVITY" />
@@ -43,6 +47,7 @@
         </activity>
         <activity
             android:name=".controller.PredictionActivity"
+            android:launchMode="singleTop"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.CONFIRM_PREDICTION_ACTIVITY" />
