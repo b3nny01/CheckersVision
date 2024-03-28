@@ -5,10 +5,10 @@ from torch.utils.data import DataLoader
 from torchvision import transforms
 
 # raw dataset version
-rawDataVersion="1_3"
+rawDataVersion="1_2_3"
 
 # dataset path
-dataPath=os.path.join("train_data","v1_3")
+dataPath=os.path.join("train_data","v1_2_3")
 
 # index filename
 indexFilename="index.csv"
@@ -48,7 +48,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 # loader
 train_loader = DataLoader(
     custom_dataset,
-    batch_size=32,
+    batch_size=64,
     shuffle=True,
     num_workers=8,
 )
