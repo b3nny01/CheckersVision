@@ -2,11 +2,17 @@ import os
 from Classifier import *
 from torchvision import transforms,models
 
+# epochs
+numEpochs = 50
+
+# raw dataset version
+rawDataVersion="1_3"
+
 # classification model path
-classifierPath=os.path.join("classification_models","mobilenet_v2","100_ep_v1_2_3_color.pt")
+classifierPath=os.path.join("classification_models","mobilenet_v2",f"{numEpochs}_ep_v{rawDataVersion}_color.pt")
 
 # optimized model path
-optimizedModelPath=os.path.join("optimized_models","mobilenet_v2","100_ep_v1_2_3_color.ptl")
+optimizedModelPath=os.path.join("optimized_models","mobilenet_v2",f"{numEpochs}_ep_v{rawDataVersion}_color.ptl")
 
 # classification model constructor
 classifierConstructor=models.mobilenet_v2

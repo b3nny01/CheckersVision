@@ -5,16 +5,16 @@ from torch.utils.data import DataLoader
 from torchvision import transforms
 
 # raw dataset version
-rawDataVersion="1_2_3"
+rawDataVersion="1_3"
 
 # dataset path
-dataPath=os.path.join("train_data","v1_2_3")
+dataPath=os.path.join("train_data",f"v{rawDataVersion}")
 
 # index filename
 indexFilename="index.csv"
 
 # epochs
-numEpochs = 100
+numEpochs = 50
 
 # output model path 
 outModelPath=os.path.join("classification_models","mobilenet_v2",f"{numEpochs}_ep_v{rawDataVersion}_color.pt")
@@ -48,7 +48,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 # loader
 train_loader = DataLoader(
     custom_dataset,
-    batch_size=64,
+    batch_size=32,
     shuffle=True,
     num_workers=8,
 )

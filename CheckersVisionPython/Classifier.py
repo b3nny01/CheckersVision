@@ -66,8 +66,9 @@ class Classifier:
             optimizedModel=torch.quantization.quantize_dynamic(self.model, dtype=torch.qint8).to(self.device)
         else:
             optimizedModel=self.model
+        
         optimizedModel=torch.jit.script(optimizedModel).to(self.device)
-        optimizedModel=optimize_for_mobile(optimizedModel).to(self.device)
+        optimizedModel=optimize_for_mobile(optimizedModel)
         return optimizedModel
 
         
