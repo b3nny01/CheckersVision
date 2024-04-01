@@ -46,7 +46,7 @@ class PredictionActivity : AppCompatActivity() {
         // game and predictedGame initialization
         game=loadCheckersGame()
         predictedGame=
-            PredictedGame.of(game, StorageManager.loadModel("100_ep_v1_3_color.ptl",this))
+            PredictedGame.of(game, StorageManager.loadModel("50_ep_v1_3_color.ptl",this))
 
 
         // prediction initialization

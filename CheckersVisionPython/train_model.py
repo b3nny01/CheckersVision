@@ -8,13 +8,13 @@ from torchvision import transforms
 rawDataVersion="1_3"
 
 # dataset path
-dataPath=os.path.join("train_data","v1_3")
+dataPath=os.path.join("train_data",f"v{rawDataVersion}")
 
 # index filename
 indexFilename="index.csv"
 
 # epochs
-numEpochs = 100
+numEpochs = 50
 
 # output model path 
 outModelPath=os.path.join("classification_models","mobilenet_v2",f"{numEpochs}_ep_v{rawDataVersion}_color.pt")

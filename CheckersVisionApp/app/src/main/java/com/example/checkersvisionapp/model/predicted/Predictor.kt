@@ -13,9 +13,10 @@ import org.pytorch.torchvision.TensorImageUtils
 class Predictor(private val module: Module) {
 
     fun predictedSquaresOf(position: CheckersPosition): MutableList<PredictedSquare> {
-        val imgToPredict = position.img//convertToGrayscale(position.img)
-        val borderSize = imgToPredict.width / 90
-        val squareSize = borderSize * 11
+        val imgToPredict = position.img
+        //val imgToPredict =convertToGrayscale(position.img)
+        val squareSize = imgToPredict.width /10
+        val borderSize=squareSize/5
         val squarePredictions = mutableListOf<PredictedSquare>()
 
         var counter = 0
@@ -25,10 +26,10 @@ class Predictor(private val module: Module) {
                 if ((counter + j) % 2 != 0) {
                     val squareImg = Bitmap.createBitmap(
                         imgToPredict,
-                        i * squareSize,
-                        j * squareSize,
-                        squareSize + 2 * borderSize,
-                        squareSize + 2 * borderSize
+                        (i+1) * squareSize-borderSize,
+                        (j+1) * squareSize-borderSize,
+                        squareSize+2*borderSize,
+                        squareSize+2*borderSize
                     )
                     val squareImgResized = Bitmap.createScaledBitmap(squareImg, 65, 65, false)
                     val inputTensor = TensorImageUtils.bitmapToFloat32Tensor(
