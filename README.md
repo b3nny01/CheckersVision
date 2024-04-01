@@ -8,7 +8,7 @@ Recorded games are then stored inside the application so that users are able to 
 
 Its development followed 3 main phases:
 
-* **Model Development** : during this first phase we used computer vision techniques to create a model capable of recognizing checkers position pictures, more details about how the model works can be found inside the CheckersVisionPython folder.
+* **Model Development** : during this first phase we used computer vision techniques to create a model capable of recognizing Checkers position pictures, more details about how the model works can be found inside the CheckersVisionPython folder.
 * **Application Development** :  this phase revolved around developing a working infrastructure for the Android application,  more details about it can be found inside the CheckersVisionApp folder.
 * **Shift Clock Extension Development** : once the first working prototype was ready, it was expanded with an Arduino shift clock capable of connecting to the application by an OTG cable, more details about it can be found inside the CheckersClockArduino folder.
 
@@ -22,6 +22,7 @@ Its development followed 3 main phases:
       <img src="resources/external_view.jpeg" width="240px" height="auto">
       <h4>Use Case Example</h4>
       <p>In this picture we can see the typical use case of the application: the device is positioned over the board, connected to the shift clock, and every time a player makes a move and presses the button, a picture of the current board is taken. Once the game ends, the user moves on to another activity, where the images are analyzed and predicted. </p>
+      <p>Alternatively, the user can review past games saved by the application. </p>
       </p>
     </td>
 
