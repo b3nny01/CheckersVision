@@ -12,7 +12,7 @@ Its development followed 3 main phases:
 * **application development** : after that we developed the infrastructure of the android application, that was our final goal, more detail about it can be found inside CheckersVisionApp folder
 * **shift clock extension development** : once we had a first working prototype of the application we decided to extend it developing an arduino shift clock capable of connecting to the application by an OTG cable, more detail about it inside CheckersClockArduino folder
 
-### **Application Screenshots**
+### Final Result
 
 <table border="0px">
 
@@ -40,3 +40,12 @@ Its development followed 3 main phases:
   </tr>
 
 <table>
+
+### Credits
+
+The project has been developed by:
+* [b3nny01](https://github.com/b3nny01/)
+* [jjulespop](https://github.com/jjulespop/)
+
+The code uses a modified version of the [Arduino-Library](https://github.com/omaraflak/Arduino-Library) by omaraflak:
+
