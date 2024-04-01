@@ -1,16 +1,16 @@
 # CheckersVision
 
-CheckersVision is an android application for the recognition of checkers games.
+CheckersVision is an Android application for the recognition of checkers games.
 It allows users to create a digital representation of their on-board match by recording it with their mobile camera.
-Recorded games are then stored inside the application so that users are able to access them whenever they want.
+Recorded games are then stored inside the application so that users may access them whenever they want.
 
 ### Development
 
 Its development followed 3 main phases:
 
-* **model development** : during this first phase we used computer vision techniques to create a model capable of recognizing checkers position pictures, more details about how the model works can be found inside the CheckersVisionPython folder
-* **application development** : after that we developed the infrastructure of the android application, that was our final goal, more detail about it can be found inside the CheckersVisionApp folder
-* **shift clock extension development** : once we had a first working prototype of the application we decided to extend it developing an arduino shift clock capable of connecting to the application by an OTG cable, more detail about it inside the CheckersClockArduino folder
+* **Model Development**: during this first phase we used computer vision techniques to create a model capable of recognizing checkers position pictures, more details about how the model works can be found inside the CheckersVisionPython folder.
+* **Application Development**:  this phase revolved around developing a working infrastructure for the Android application,  more details about it can be found inside the CheckersVisionApp folder.
+* **Shift Clock Extension Development**: once the first working prototype was ready, it was expanded with an Arduino shift clock capable of connecting to the application by an OTG cable, more details about it can be found inside the CheckersClockArduino folder.
 
 ### Final Result
 
@@ -21,7 +21,8 @@ Its development followed 3 main phases:
       <p align="center">
       <img src="resources/external_view.jpeg" width="240px" height="auto">
       <h4>Use Case Example</h4>
-      <p>in this picture we can see the typical use case of the application, the mobile is positioned over the board, connected to the shift clock, every time a player makes a and click his button  a picture of the checkers position is taken, once the game ends the user pass to an activity where the images are analyzed and predicted </p>
+      <p>In this picture we can see the typical use case of the application: the device is positioned over the board, connected to the shift clock, and every time a player makes a move and presses the button, a picture of the current board is taken. Once the game ends, the user moves on to another activity, where the images are analyzed and predicted. </p>
+      <p>Alternatively, the user can review past games saved ad stored by the application. </p>
       </p>
     </td>
 
