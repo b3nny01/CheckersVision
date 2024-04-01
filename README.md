@@ -21,7 +21,7 @@ Its development followed 3 main phases:
       <p align="center">
       <img src="resources/external_view.jpeg" width="240px" height="auto">
       <h4>Use Case Example</h4>
-      <p>In this picture we can see the typical use case of the application: the device is positioned over the board, connected to the shift clock, and every time a player makes a move and clicks on the button, a picture of the board is taken. Once the game ends, the user presses the finish button and passes to another activity, where the images are analyzed and predicted. </p>
+      <p>In this picture we can see the typical use case of the application: the device is positioned over the board, connected to the shift clock, and every time a player makes a move and presses the button, a picture of the current board is taken. Once the game ends, the user moves on to another activity, where the images are analyzed and predicted. </p>
       </p>
     </td>
 
