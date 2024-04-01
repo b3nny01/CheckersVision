@@ -2,7 +2,7 @@
 
 CheckersVision is an Android application for the recognition of checkers games.
 It allows users to create a digital representation of their on-board match by recording it with their mobile camera.
-Recorded games are then stored inside the application so that users are able to access them whenever they want.
+Recorded games are then stored inside the application so that users may access them whenever they want.
 
 ### Development
 
@@ -22,7 +22,7 @@ Its development followed 3 main phases:
       <img src="resources/external_view.jpeg" width="240px" height="auto">
       <h4>Use Case Example</h4>
       <p>In this picture we can see the typical use case of the application: the device is positioned over the board, connected to the shift clock, and every time a player makes a move and presses the button, a picture of the current board is taken. Once the game ends, the user moves on to another activity, where the images are analyzed and predicted. </p>
-      <p>Alternatively, the user can review past games saved by the application. </p>
+      <p>Alternatively, the user can review past games saved ad stored by the application. </p>
       </p>
     </td>
 
