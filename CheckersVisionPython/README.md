@@ -9,4 +9,8 @@ The dataset has been created from scratch, using the following process:
 * We tested the model using the raw_image_test_model.py and the camera_test_model.py scripts
 * We used the optimize_model.py script to export the model for mobile devices
 
+<br>
+
+<img src="_readmeImgs_/python_dev_flow.png">
+
   
