@@ -1,7 +1,7 @@
 # CheckersVision Python
 
-This folder contains the python code developed for creating, training and testing the model.`<br>`
-For the classifier creation we decided to rely on the Pytorch library which offers a variety of functionalities for computer vision applications, also allowing to export generated models to mobile devices by the Pytorch Mobile module.`<br>`
+This folder contains the python code developed for creating, training and testing the model.
+For the classifier creation we decided to rely on the Pytorch library which offers a variety of functionalities for computer vision applications, also allowing to export generated models to mobile devices by the Pytorch Mobile module.
 The dataset has been created from scratch, using the following process:
 
 * We took pictures of checkers games which were then inserted inside the raw_train_data folder.
