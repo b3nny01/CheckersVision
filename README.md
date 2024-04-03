@@ -36,7 +36,8 @@ Its development followed 3 main phases:
   </tr>
   <tr rowspan="0"></tr>
   <tr>
-    <td colspan="2"><p align="center"><img src="_readmeImgs_/old_games_activity_screen.jpeg" width="150px" height="auto"></p></td>
+    <td><p align="center"><img src="_readmeImgs_/old_games_activity_screen.jpeg" width="150px" height="auto"></p></td>
+    <td></td>
   </tr>
 
 <table>
