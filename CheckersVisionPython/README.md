@@ -13,4 +13,4 @@ The dataset has been created from scratch, using the following process:
 
 <br>
 
-<img src="_readmeImgs_/python_dev_flow.jpg">
+<img src="_readmeImgs_/python_dev_flow.png">
