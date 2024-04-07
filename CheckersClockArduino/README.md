@@ -23,6 +23,6 @@ void loop() {
 
 It consists of 3 calls:
 
-* `hadleButtons()`: this function makes sure that a player's led is active only during is turn and that once pressed the turn is changed
+* `hadleButtons()`: this function makes sure that a player's button is active only during is turn and that once pressed the turn is changed
 * `handleLeds()`: this function makes sure that a player's led is lighted up only during his turn
 * `handleTimes()`: this function computes the current time and updates the values on the clock' screen
