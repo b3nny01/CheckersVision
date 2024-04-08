@@ -1,1 +1,1 @@
-This folder contains the Python code developed for creating, training, and testing the model. During this phase, the main goal was the creation of a classifier capable of recognizing an image of a checkers square as:
+This folder contains the code and materials necessary for implementing the Android Application.
