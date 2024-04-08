@@ -37,6 +37,7 @@ class NewGameActivity : AppCompatActivity() {
 
     // views
     private lateinit var previewView: PreviewView
+    private lateinit var saveBtn: ImageButton
     private lateinit var takePhotoBtn: ImageButton
     private lateinit var finishBtn: ImageButton
     private lateinit var arduino: Arduino
@@ -51,6 +52,7 @@ class NewGameActivity : AppCompatActivity() {
 
         // getting layout elements
         previewView = findViewById(R.id.previewView)
+        saveBtn=findViewById(R.id.saveBtn)
         takePhotoBtn = findViewById(R.id.takePhotoBtn)
         finishBtn = findViewById(R.id.finishBtn)
 
@@ -95,6 +97,11 @@ class NewGameActivity : AppCompatActivity() {
 
         })
 
+        // saveBtn initialization
+        saveBtn.setOnClickListener {
+            saveGame()
+        }
+
 
         // camera initialization
         setupCamera(takePhotoBtn, previewView)
@@ -102,6 +109,7 @@ class NewGameActivity : AppCompatActivity() {
 
         // finishBtn initialization
         finishBtn.setOnClickListener {
+            saveGame()
             moveToPrediction()
         }
 
@@ -137,8 +145,12 @@ class NewGameActivity : AppCompatActivity() {
 
     }
 
+    private fun saveGame()
+    {
+        StorageManager.saveCheckersGame(this,game)
+    }
+
     private fun moveToPrediction() {
-        StorageManager.saveCheckersGame(this, game)
         val intent = Intent(this, PredictionActivity::class.java)
         intent.putExtra("gameName", game.name)
         startActivity(intent)

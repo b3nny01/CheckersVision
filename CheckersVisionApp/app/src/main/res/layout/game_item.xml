@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toStartOf="@+id/gameName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/directory_icon"/>
+        app:srcCompat="@drawable/game_icon"/>
 
     <TextView
         android:id="@+id/gameName"

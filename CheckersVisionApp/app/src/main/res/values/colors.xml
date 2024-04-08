@@ -19,8 +19,8 @@
 
 
     <color name="colorAccent">#FFFAFA</color>
-    <!--<color name="colorPrimary">#2C666E</color>
-    <color name="colorPrimaryDark">#07393C</color>-->
+    <!--<color name="colorPrimary">#2C666E</color>-->
+    <color name="colorPrimaryDark">#5A189A</color>
     <color name="colorPrimary">#7B2CBF</color>
     <color name="colorBackground">#FFFAFA</color>
 
