@@ -8,7 +8,6 @@ This folder contains the Python code developed for creating, training, and testi
 * BLACK_MAN
 
 For the realization of the first prototype of the model, we decided to avoid the recognition of WHITE_KING and BLACK_KING. This feature will be added in following releases.
-W
 
 ### Development
 
@@ -19,6 +18,3 @@ The development followed 3 main phases:
 * **Model Optimization:** During this phase, we used the optimize_model script to create an exportable version of the model capable of running on mobile devices. This was possible thanks to the PyTorch Mobile library. Since our model was quite simple and didn't need to run in real-time, we hadn't performed weights quantization, opting for a more precise result.
 
 <img src="_readmeImgs_/python_dev_flow.png">
-
-
-
