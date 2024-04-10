@@ -9,16 +9,21 @@ There are four main activities:
 
 * MainActivity: home page, allows the user to start a new game or view old ones.
 * NewGameActivity: where pictures of the board are taken.
-* PredictionActivity: recreates the virtual game image
+* PredictionActivity: recreates the virtual game image.
 * OldGamesActivity: log for old games.
+
+The following picture shows the activity flow.
 
 <img src="../_readmeImgs_/activities.png">
 
 ### Model
 
 This contains all the classes that make up our domain model. 
-Specifically, we decided to split the checkers game representation into two branches: on one side there is the real game, on the other the predicted, virtual game, each with its own classes that mirror one another.
+Specifically, we decided to split the checkers game representation into two branches: on one side there is the real game, on the other the predicted, virtual game, each with its own classes that mirror one another. Throughout 
 
 
 ### Persistence
 
+It contains our Storage Manager, whose job is to access the application's local storage to save, retrieve, or delete the pictures taken by the user.
+
+On top of that, it contains the function used to load the prediction model before starting the prediction process.
