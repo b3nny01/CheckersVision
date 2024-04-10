@@ -12,7 +12,7 @@ There are four main activities:
 * PredictionActivity: recreates the virtual game image
 * OldGamesActivity: log for old games.
 
-<img src="_readmeImgs_/activities.png">
+<img src="../_readmeImgs_/activities.png">
 
 ### Model
 
@@ -22,5 +22,3 @@ Specifically, we decided to split the checkers game representation into two bran
 
 ### Persistence
 
-
-<img src="_readmeImgs_/activities.png">
