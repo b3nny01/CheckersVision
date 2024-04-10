@@ -1,6 +1,6 @@
 # CheckersVision App
 
-This folder contains the code and materials necessary for implementing the Android Application, which was developed in Android Studio using Kotlin language.
+This folder contains the code and materials necessary for implementing the Android Application. 
 
 ### Controller
 
@@ -12,7 +12,7 @@ There are four main activities:
 * PredictionActivity: recreates the virtual game image.
 * OldGamesActivity: log for old games.
 
-Each one is associated with an activity layout, that defines the structure of the user interface for the respective activity.
+Each one is associated with an activity layout, that defines the structure of the user interface of the respective activity.
 
 The following picture shows the activity flow.
 
