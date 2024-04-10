@@ -12,6 +12,8 @@ There are four main activities:
 * PredictionActivity: recreates the virtual game image.
 * OldGamesActivity: log for old games.
 
+Each one is associated with an activity layout, that defines the structure of the user interface for the respective activity.
+
 The following picture shows the activity flow.
 
 <img src="../_readmeImgs_/activities.png">
@@ -19,7 +21,9 @@ The following picture shows the activity flow.
 ### Model
 
 This contains all the classes that make up our domain model. 
-Specifically, we decided to split the checkers game representation into two branches: on one side there is the real game, on the other the predicted, virtual game, each with its own classes that mirror one another. Throughout 
+Specifically, we decided to split the checkers game representation into two branches: on one side there is the real game, on the other the predicted, virtual game, each with its own classes that mirror one another.
+
+In the first version implemented, 
 
 
 ### Persistence
