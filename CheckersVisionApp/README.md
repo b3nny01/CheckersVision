@@ -16,7 +16,7 @@ Each one is associated with an activity layout, that defines the structure of th
 
 The following picture shows the activity flow.
 
-<img src="../_readmeImgs_/activitiy_flow.png">
+<img src="../_readmeImgs_/activity_flow.png">
 
 ### Model
 
