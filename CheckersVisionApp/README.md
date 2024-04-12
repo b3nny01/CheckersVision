@@ -16,7 +16,11 @@ Each one is associated with an activity layout, that defines the structure of th
 
 The following picture shows the activity flow.
 
+
+
 <img src="../_readmeImgs_/activity_flow.png">
+
+
 
 ### Model
 
@@ -25,11 +29,14 @@ For these reasons, we improved the model in the following version. Specifically,
 
 The following picture shows a simplified domain model.
 
+
+
 <img src="../_readmeImgs_/dominio_chiaro.png">
+
 
 
 ### Persistence
 
-It contains our Storage Manager, whose job is to access the application's local storage to save, retrieve, or delete the pictures taken by the user.
+It contains our Storage Manager, whose job is to access the application's local storage to save, retrieve, or delete the pictures taken by the user. Like the game predictions, the pictures were initially eagerly loaded from the local storage, and we later changed this strategy to lazy loading.
 
 On top of that, it contains the function used to load the prediction model before starting the prediction process.
