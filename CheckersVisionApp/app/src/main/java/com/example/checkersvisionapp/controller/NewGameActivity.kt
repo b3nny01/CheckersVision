@@ -211,9 +211,19 @@ class NewGameActivity : AppCompatActivity() {
         )
 
     }
+    override fun onPause() {
+        super.onPause()
+        arduino.send("pause\n".toByteArray())
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        arduino.send("restart\n".toByteArray())
+    }
 
     override fun onDestroy() {
         super.onDestroy()
+        arduino.send("end\n".toByteArray());
         arduino.unsetArduinoListener()
         arduino.close()
     }

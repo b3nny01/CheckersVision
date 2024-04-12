@@ -21,7 +21,6 @@ int ledStatus[] = { LOW, LOW };
 long int times[] = { 3000, 3000 };
 char timeString[17]="0000000000000000";
 int status= READY;
-String cmd;
 long int startTime = -1;                                                                                                                                                                                                                
 long int passedTime = 0;                                                                                                                                                                                                                   
                                                                                                                                                                                                                                            
@@ -32,7 +31,7 @@ void handleStatusTransitions()
   {
     case READY:
       if(Serial.available()) {
-        Serial.readString();
+        Serial.read();
       }
       if(digitalRead(btnPins[turn]) == HIGH){
         status=RUNNING;
@@ -44,12 +43,13 @@ void handleStatusTransitions()
       {
         status=END;
       } else if(Serial.available()){
-        cmd = Serial.readString();
+        String cmd = Serial.readStringUntil('\n');
         cmd.trim();
         if(cmd.equals("pause"))
         {
           startTime=-1;
           status=PAUSE;
+          break;
         }
       }
       
@@ -58,11 +58,13 @@ void handleStatusTransitions()
     case PAUSE:
       if(Serial.available())
       {
-        cmd = Serial.readString();
+        String cmd = Serial.readStringUntil('\n');
         cmd.trim();
         if(cmd.equals("restart"))
         {
           status=RUNNING;
+        }else if(cmd.equals("end")){
+          status=END;
         }
       }
     break;
