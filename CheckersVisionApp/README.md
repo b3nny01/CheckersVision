@@ -16,11 +16,9 @@ Each one is associated with an activity layout, that defines the structure of th
 
 The following picture shows the activity flow.
 
-
-
+<br><br>
 <img src="../_readmeImgs_/activity_flow.png">
-
-
+<br><br>
 
 ### Model
 
@@ -29,11 +27,9 @@ For these reasons, we improved the model in the following version. Specifically,
 
 The following picture shows a simplified domain model.
 
-
-
+<br><br>
 <img src="../_readmeImgs_/dominio_chiaro.png">
-
-
+<br><br>
 
 ### Persistence
 
