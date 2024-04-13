@@ -13,7 +13,7 @@ To face the problem we decided to develop a small arduino extension, consisting 
 We decided to delevolp the shift clock as an arduino entity in itself indipendent of the application.
 at first we created the wire scheme:
 
-<img src="_readmeImgs_/CheckersClockSchme.png"/>
+<img src="_readmeImgs_/CheckersClockScheme.png"/>
 
 To keep the device as simple as possible the software inside the Arduino implements a finite state machine that follow this state graph:
 
