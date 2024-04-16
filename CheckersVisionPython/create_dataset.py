@@ -3,10 +3,10 @@ import cv2
 from torchvision import transforms
 
 # raw dataset path
-rawDataPath=os.path.join("raw_train_data","v1")
+rawDataPath=os.path.join("raw_test_data","v1")
 
 # output dataset path
-outDataPath=os.path.join("train_data","v1")
+outDataPath=os.path.join("test_data","v1")
 
 # getting filenames
 imageFilenames = [f for f in os.listdir(rawDataPath) if f.endswith(('.jpg'))]
@@ -19,15 +19,15 @@ for i in range(len(imageFilenames)):
     image = cv2.imread(imagePath)
 
     # applying transformations
-    #----------------------v1------------------------
-    image=image[1100:3000,600:2500]
-    image=cv2.resize(image,(410,410))
+    #----------------train_v1------------------------
+    # image=image[1100:3000,600:2500]
+    # image=cv2.resize(image,(410,410))
     # cv2.imshow("image resized",image)
     # cv2.waitKey(0)
     # cv2.destroyAllWindows()
     #------------------------------------------------
 
-    #----------------------v-2-----------------------
+    #----------------train_v2------------------------
     # image=image[500:1100,300:900]
     # image=cv2.resize(image,(410,410))
     # cv2.imshow("image resized",image)
@@ -35,9 +35,17 @@ for i in range(len(imageFilenames)):
     # cv2.destroyAllWindows()
     #------------------------------------------------
 
-    #----------------------v3------------------------
+    #----------------train_v3------------------------
     # image=image[925:3115,0:2230]
     # image=cv2.resize(image,(410,410))
+    # cv2.imshow("image resized",image)
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
+    #------------------------------------------------
+
+    #------------------test_v1-----------------------
+    image=image[200:2160,200:2160]
+    image=cv2.resize(image,(410,410))
     # cv2.imshow("image resized",image)
     # cv2.waitKey(0)
     # cv2.destroyAllWindows()

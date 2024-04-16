@@ -34,6 +34,11 @@ class Classifier:
     
         print("classifier loaded")
 
+    def loadOptimizedModel(self,modelPath):
+        print(f"loading classifier at {modelPath}...")
+        self.model=torch.jit.load(modelPath)
+        print("classifier loaded")
+
 
     def predictImage(self, image, transform):
         if isinstance(image, np.ndarray):

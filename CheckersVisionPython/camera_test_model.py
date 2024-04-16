@@ -7,7 +7,7 @@ from torchvision import transforms,models
 cameraUrl = 'http://192.168.1.19:8080/video'
 
 # classification model path
-classifierPath=os.path.join("classification_models","mobilenet_v2","50_ep_v1.pt")
+classifierPath=os.path.join("classification_models","mobilenet_v2","50_ep_v1_3_color.pt")
 
 # classification model constructor
 classifierConstructor=models.mobilenet_v2

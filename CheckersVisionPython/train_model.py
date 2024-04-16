@@ -17,7 +17,7 @@ indexFilename="index.csv"
 numEpochs = 50
 
 # output model path 
-outModelPath=os.path.join("classification_models","mobilenet_v2",f"{numEpochs}_ep_v{rawDataVersion}_color.pt")
+outModelPath=os.path.join("classification_models","mobilenet_v2",f"{numEpochs}_ep_v{rawDataVersion}_color_white.pt")
 
 # loading torchvision pretrained model
 model = models.mobilenet_v2(weights=models.mobilenet.MobileNet_V2_Weights.DEFAULT)
@@ -42,7 +42,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 
 # loss function and optimizer
-criterion = torch.nn.CrossEntropyLoss(ignore_index=0)
+criterion = torch.nn.CrossEntropyLoss()#ignore_index=0)
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
 # loader

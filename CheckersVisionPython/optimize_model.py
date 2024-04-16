@@ -12,7 +12,7 @@ rawDataVersion="1_3"
 classifierPath=os.path.join("classification_models","mobilenet_v2",f"{numEpochs}_ep_v{rawDataVersion}_color.pt")
 
 # optimized model path
-optimizedModelPath=os.path.join("optimized_models","mobilenet_v2",f"{numEpochs}_ep_v{rawDataVersion}_color.ptl")
+optimizedModelPath=os.path.join("optimized_models","mobilenet_v2",f"{numEpochs}_ep_v{rawDataVersion}_color_quant.ptl")
 
 # classification model constructor
 classifierConstructor=models.mobilenet_v2
@@ -35,5 +35,5 @@ transform = transforms.Compose([
 classifier=Classifier(classes,"cpu")
 classifier.loadModel(modelConstructor=classifierConstructor,modelPath=classifierPath)
 
-optimizedModel=classifier.getOptimizedModel()
+optimizedModel=classifier.getOptimizedModel(True)
 optimizedModel._save_for_lite_interpreter(optimizedModelPath)

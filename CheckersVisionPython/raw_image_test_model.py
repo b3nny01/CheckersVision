@@ -7,7 +7,7 @@ from torchvision import transforms,models
 rawImagePath = os.path.join("raw_test_data","Image_1705043924629.jpg")
 
 # classification model path
-classifierPath=os.path.join("classification_models","mobilenet_v2","50_ep_v1_3.pt")
+classifierPath=os.path.join("classification_models","mobilenet_v2","50_ep_v1_3_color.pt")
 
 # classification model constructor
 classifierConstructor=models.mobilenet_v2

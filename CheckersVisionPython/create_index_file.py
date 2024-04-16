@@ -4,13 +4,13 @@ from torchvision import transforms,models
 from Classifier import *
 
 # dataset path
-dataPath="train_data"
+dataPath="test_data/v1"
 
 # index filename
 indexFilename="index.csv"
 
 # classification model path
-classifierPath=os.path.join("classification_models","mobilenet_v2","old_50_ep.pt")
+classifierPath=os.path.join("classification_models","mobilenet_v2","50_ep_v1_3_color_white.pt")
 
 # classification model constructor
 classifierConstructor=models.mobilenet_v2
