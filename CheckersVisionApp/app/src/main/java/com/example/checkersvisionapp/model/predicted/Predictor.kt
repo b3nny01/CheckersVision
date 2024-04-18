@@ -16,7 +16,7 @@ class Predictor(private val module: Module) {
         val imgToPredict = position.img
         //val imgToPredict =convertToGrayscale(position.img)
         val squareSize = imgToPredict.width /10
-        val borderSize=squareSize/5
+        val borderSize=5
         val squarePredictions = mutableListOf<PredictedSquare>()
 
         var counter = 0
@@ -44,7 +44,7 @@ class Predictor(private val module: Module) {
                     var maxIndex = 0
                     var max = -Float.MAX_VALUE
                     for (k in scores.indices) {
-                        if (scores[k] >= max) {
+                        if (scores[k] >= max && k > 0) { // excluding white_squares
                             max = scores[k]
                             maxIndex = k
                         }
