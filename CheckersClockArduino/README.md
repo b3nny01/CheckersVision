@@ -36,7 +36,7 @@ void loop() {
 }
 ```
 
-It consists of 3 calls:
+It consists of 5 calls:
 * `handleStateTransitions()`: this function implements the state transition scheme as shown in th previous image
 * `hadleButtons()`: this function makes sure that a player's button is active only during his turn and that once pressed the turn is changed
 * `handleLeds()`: this function makes sure that a player's led is lighted up only during his turn
