@@ -8,9 +8,9 @@ Recorded games are then stored inside the application so that users may access t
 
 Its development followed 3 main phases:
 
-* **Model Development**: during this first phase we used computer vision techniques to create a model capable of recognizing checkers position pictures, more details about how the model works can be found inside the CheckersVisionPython folder.
-* **Application Development**:  this phase revolved around developing a working infrastructure for the Android application,  more details about it can be found inside the CheckersVisionApp folder.
-* **Shift Clock Extension Development**: once the first working prototype was ready, it was expanded with an Arduino shift clock capable of connecting to the application by an OTG cable, more details about it can be found inside the CheckersClockArduino folder.
+* **Model Development**: during this first phase we used computer vision techniques to create a model capable of recognizing checkers position pictures, more details about how the model works can be found inside the [CheckersVisionPython](https://github.com/b3nny01/CheckersVision/tree/main/CheckersVisionPython) folder.
+* **Application Development**:  this phase revolved around developing a working infrastructure for the Android application,  more details about it can be found inside the [CheckersVisionApp](https://github.com/b3nny01/CheckersVision/tree/main/CheckersVisionApp) folder.
+* **Shift Clock Extension Development**: once the first working prototype was ready, it was expanded with an Arduino shift clock capable of connecting to the application by an OTG cable, more details about it can be found inside the [CheckersClockArduino](https://github.com/b3nny01/CheckersVision/tree/main/CheckersClockArduino) folder.
 
 ### Final Result
 
