@@ -15,8 +15,7 @@ Its development followed 3 main phases:
 ### Final Result
 
 
-<img src="_readmeImgs_/external_view.jpeg" width="auto" height="480px">
-<img src="_readmeImgs_/checkersVision.gif" width="auto" height="480px">
+<img src="_readmeImgs_/external_view.jpeg" width="auto" height="480px">&emsp;<img src="_readmeImgs_/checkersVisionGif.gif" width="auto" height="480px">
 
 <h4>Use Case Example</h4>
   <p>In this picture we can see the typical use case of the application: the device is positioned over the board, connected to the shift clock, and every time a player makes a move and presses the button, a picture of the current board is taken. Once the game ends, the user moves on to another activity, where the images are analyzed and predicted.
