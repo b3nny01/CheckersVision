@@ -13,7 +13,7 @@ Its development followed 3 main phases:
 * **Shift Clock Extension Development**: once the first working prototype was ready, it was expanded with an Arduino shift clock capable of connecting to the application by an OTG cable, more details about it can be found inside the [CheckersClockArduino](https://github.com/b3nny01/CheckersVision/tree/main/CheckersClockArduino) folder.
 
 ### Use Case Example
-  <p>In this picture we can see the typical use case of the application: the device is positioned over the board, connected to the shift clock, and every time a player makes a move and presses the button, a picture of the current board is taken. Once the game ends, the user moves on to another activity, where the images are analyzed and predicted.
+  <p>In the following pictures we can see the typical use case of the application: the device is positioned over the board, connected to the shift clock, and every time a player makes a move and presses the button, a picture of the current board is taken. Once the game ends, the user moves on to another activity, where the images are analyzed and predicted.
   Alternatively, the user can review past games saved and stored by the application. </p>
 <img src="_readmeImgs_/activities.png">
 
