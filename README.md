@@ -12,15 +12,14 @@ Its development followed 3 main phases:
 * **Application Development**:  this phase revolved around developing a working infrastructure for the Android application,  more details about it can be found inside the [CheckersVisionApp](https://github.com/b3nny01/CheckersVision/tree/main/CheckersVisionApp) folder.
 * **Shift Clock Extension Development**: once the first working prototype was ready, it was expanded with an Arduino shift clock capable of connecting to the application by an OTG cable, more details about it can be found inside the [CheckersClockArduino](https://github.com/b3nny01/CheckersVision/tree/main/CheckersClockArduino) folder.
 
-### Final Result
-
-
-<img src="_readmeImgs_/external_view.jpeg" width="auto" height="480px">&emsp;<img src="_readmeImgs_/checkersVisionGif5.gif" width="auto" height="480px">
-
-<h4>Use Case Example</h4>
+### Use Case Example
   <p>In this picture we can see the typical use case of the application: the device is positioned over the board, connected to the shift clock, and every time a player makes a move and presses the button, a picture of the current board is taken. Once the game ends, the user moves on to another activity, where the images are analyzed and predicted.
   Alternatively, the user can review past games saved and stored by the application. </p>
 <img src="_readmeImgs_/activities.png">
+
+### Final Result
+
+<img src="_readmeImgs_/external_view.jpeg" width="auto" height="480px">&emsp;<img src="_readmeImgs_/checkersVisionGif5.gif" width="auto" height="480px">
 
 ### Credits
 
