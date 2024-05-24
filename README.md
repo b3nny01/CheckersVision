@@ -8,9 +8,9 @@ Recorded games are then stored inside the application so that users may access t
 
 Its development followed 3 main phases:
 
-* **Model Development**: during this first phase we used computer vision techniques to create a model capable of recognizing checkers position pictures, more details about how the model works can be found inside the [CheckersVisionPython](https://github.com/b3nny01/CheckersVision/tree/main/CheckersVisionPython) folder.
-* **Application Development**:  this phase revolved around developing a working infrastructure for the Android application,  more details about it can be found inside the [CheckersVisionApp](https://github.com/b3nny01/CheckersVision/tree/main/CheckersVisionApp) folder.
-* **Shift Clock Extension Development**: once the first working prototype was ready, it was expanded with an Arduino shift clock capable of connecting to the application by an OTG cable, more details about it can be found inside the [CheckersClockArduino](https://github.com/b3nny01/CheckersVision/tree/main/CheckersClockArduino) folder.
+* **Model Development**: during this first phase we used computer vision techniques to create a model capable of recognizing checkers position pictures, more details about how the model works can be found inside the [CheckersVisionPython readme](https://github.com/b3nny01/CheckersVision/tree/main/CheckersVisionPython/README.md).
+* **Application Development**:  this phase revolved around developing a working infrastructure for the Android application,  more details about it can be found inside the [CheckersVisionApp readme](https://github.com/b3nny01/CheckersVision/tree/main/CheckersVisionApp/README.md).
+* **Shift Clock Extension Development**: once the first working prototype was ready, it was expanded with an Arduino shift clock capable of connecting to the application by an OTG cable, more details about it can be found inside the [CheckersClockArduino readme](https://github.com/b3nny01/CheckersVision/tree/main/CheckersClockArduino/README.md).
 
 ### Use Case Example
   <p>In the following pictures we can see the typical use case of the application: the device is positioned over the board, connected to the shift clock, and every time a player makes a move and presses the button, a picture of the current board is taken. Once the game ends, the user moves on to another activity, where the images are analyzed and predicted.
