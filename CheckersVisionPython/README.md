@@ -9,7 +9,7 @@ This folder contains the Python code developed for creating, training, and testi
 
 For the realization of the first prototype of the model, we decided to avoid the recognition of WHITE_KING and BLACK_KING. This feature will be added in following releases.
 
-### Development
+## Development
 
 The development followed 3 main phases:
 
