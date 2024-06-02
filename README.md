@@ -20,8 +20,8 @@ Its development followed 3 main phases:
 
 <p>In the following pictures we can see the typical use case of the application: the device is positioned over the board, connected to the shift clock, and every time a player makes a move and presses the button, a picture of the current board is taken. Once the game ends, the user moves on to another activity, where the images are analyzed and predicted.
   Alternatively, the user can review past games saved and stored by the application. </p>
-<img src="_readmeImgs_/activities.png" height="480px"><br/>
-<img src="_readmeImgs_/external_view.jpeg" width="auto" height="480px"> <img src="_readmeImgs_/checkersVisionGif5.gif" width="auto" height="480px">
+<img src="_readmeImgs_/activities.png" width="500px"><br/>
+<img src="_readmeImgs_/external_view.jpeg" width="300px" height="400px"> <img src="_readmeImgs_/checkersVisionGif5.gif" width="200px" height="400px">
 
 ## Credits
 
