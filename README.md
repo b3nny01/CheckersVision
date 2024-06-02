@@ -26,6 +26,7 @@ Its development followed 3 main phases:
 ## Credits
 
 CheckersVision uses a modified version of the [Arduino-Library](https://github.com/omaraflak/Arduino-Library) by omaraflak.<br/>
+
 The project has been developed by:
 
 * [b3nny01](https://github.com/b3nny01/)
